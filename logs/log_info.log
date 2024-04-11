@@ -1618,3 +1618,105 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2024-04-11 20:51:05.124 [http-nio-0.0.0.0-7529-exec-2] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: 9283b3f4-2d05-4dbd-89f2-7dda40a171bb, cost: 19745ms
 2024-04-11 20:53:23.199 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
 2024-04-11 20:53:23.210 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-04-11 21:16:01.468 [restartedMain] INFO  com.nanshuo.project.MyApplication - Starting MyApplication using Java 1.8.0_402 on nanshuo with PID 16568 (E:\Desktop\code\2024\api-platform-backend\target\classes started by dell in E:\Desktop\code\2024\api-platform-backend)
+2024-04-11 21:16:01.470 [restartedMain] INFO  com.nanshuo.project.MyApplication - The following 1 profile is active: "dev"
+2024-04-11 21:16:01.582 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-11 21:16:01.582 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-11 21:16:02.646 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-04-11 21:16:02.651 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-04-11 21:16:02.687 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2024-04-11 21:16:03.874 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7529 (http)
+2024-04-11 21:16:03.887 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-7529"]
+2024-04-11 21:16:03.888 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-11 21:16:03.888 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-11 21:16:03.968 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2024-04-11 21:16:03.968 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2385 ms
+2024-04-11 21:16:07.064 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-11 21:16:07.215 [restartedMain] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-04-11 21:16:09.236 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-7529"]
+2024-04-11 21:16:09.246 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 7529 (http) with context path '/api'
+2024-04-11 21:16:09.247 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2024-04-11 21:16:09.251 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-04-11 21:16:09.281 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2024-04-11 21:16:09.802 [restartedMain] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2024-04-11 21:16:09.820 [restartedMain] INFO  com.nanshuo.project.MyApplication - Started MyApplication in 9.075 seconds (JVM running for 11.134)
+2024-04-11 21:16:09.827 [restartedMain] INFO  com.nanshuo.project.MyApplication - Project started successfully！
+2024-04-11 21:16:19.939 [http-nio-0.0.0.0-7529-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-11 21:16:19.939 [http-nio-0.0.0.0-7529-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-11 21:16:19.939 [http-nio-0.0.0.0-7529-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-11 21:16:42.115 [http-nio-0.0.0.0-7529-exec-9] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: 49e3838d-cc03-4ee8-868e-2117dc4de9e9, path: /api/user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@5a08ab4d]
+2024-04-11 21:16:48.329 [http-nio-0.0.0.0-7529-exec-1] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: b858e816-ecb7-4b9a-a817-a69560a72814, path: /api/user/login, ip: 0:0:0:0:0:0:0:1, params: [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@6b944583, UserLoginRequest(userAccount=nanshuo, userPassword=nanshuo.icu, imageCaptcha=, captchaKey=)]
+2024-04-11 21:16:48.379 [http-nio-0.0.0.0-7529-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-11 21:16:48.687 [http-nio-0.0.0.0-7529-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-11 21:16:48.748 [http-nio-0.0.0.0-7529-exec-1] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: b858e816-ecb7-4b9a-a817-a69560a72814, cost: 421ms
+2024-04-11 21:16:53.351 [http-nio-0.0.0.0-7529-exec-4] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: 1eb735c0-f8d5-4ca8-a6de-bae49a97bd41, path: /api/user/get/login, ip: 0:0:0:0:0:0:0:1, params: [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@39b0e522]
+2024-04-11 21:16:53.368 [http-nio-0.0.0.0-7529-exec-4] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: 1eb735c0-f8d5-4ca8-a6de-bae49a97bd41, cost: 22ms
+2024-04-11 21:17:25.430 [http-nio-0.0.0.0-7529-exec-5] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: c89f0384-15c7-414d-8b4a-5c564e48a6f9, path: /api/interfaceInfo/get, ip: 0:0:0:0:0:0:0:1, params: [1]
+2024-04-11 21:17:25.447 [http-nio-0.0.0.0-7529-exec-5] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: c89f0384-15c7-414d-8b4a-5c564e48a6f9, cost: 17ms
+2024-04-11 21:21:26.613 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-11 21:21:26.635 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-11 21:21:33.628 [restartedMain] INFO  com.nanshuo.project.MyApplication - Starting MyApplication using Java 1.8.0_402 on nanshuo with PID 15648 (E:\Desktop\code\2024\api-platform-backend\target\classes started by dell in E:\Desktop\code\2024\api-platform-backend)
+2024-04-11 21:21:33.630 [restartedMain] INFO  com.nanshuo.project.MyApplication - The following 1 profile is active: "dev"
+2024-04-11 21:21:33.736 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-11 21:21:33.737 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-11 21:21:34.535 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-04-11 21:21:34.537 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-04-11 21:21:34.562 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2024-04-11 21:21:35.336 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7529 (http)
+2024-04-11 21:21:35.345 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-7529"]
+2024-04-11 21:21:35.346 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-11 21:21:35.346 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-11 21:21:35.408 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2024-04-11 21:21:35.409 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1672 ms
+2024-04-11 21:21:37.834 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-11 21:21:37.940 [restartedMain] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-04-11 21:21:39.595 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-7529"]
+2024-04-11 21:21:39.604 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 7529 (http) with context path '/api'
+2024-04-11 21:21:39.605 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2024-04-11 21:21:39.607 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-04-11 21:21:39.631 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2024-04-11 21:21:40.057 [restartedMain] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2024-04-11 21:21:40.067 [restartedMain] INFO  com.nanshuo.project.MyApplication - Started MyApplication in 7.008 seconds (JVM running for 8.741)
+2024-04-11 21:21:40.071 [restartedMain] INFO  com.nanshuo.project.MyApplication - Project started successfully！
+2024-04-11 21:21:59.848 [http-nio-0.0.0.0-7529-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-11 21:21:59.848 [http-nio-0.0.0.0-7529-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-11 21:21:59.851 [http-nio-0.0.0.0-7529-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-04-11 21:21:59.921 [http-nio-0.0.0.0-7529-exec-1] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: 68139232-d536-4ca7-a9df-e51563231eff, path: /api/interfaceInfo/get, ip: 0:0:0:0:0:0:0:1, params: [IdRequest(id=null)]
+2024-04-11 21:22:51.881 [restartedMain] INFO  com.nanshuo.project.MyApplication - Starting MyApplication using Java 1.8.0_402 on nanshuo with PID 20800 (E:\Desktop\code\2024\api-platform-backend\target\classes started by dell in E:\Desktop\code\2024\api-platform-backend)
+2024-04-11 21:22:51.883 [restartedMain] INFO  com.nanshuo.project.MyApplication - The following 1 profile is active: "dev"
+2024-04-11 21:22:51.978 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-11 21:22:51.979 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-11 21:22:52.888 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-04-11 21:22:52.890 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-04-11 21:22:52.917 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2024-04-11 21:22:53.688 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 7529 (http)
+2024-04-11 21:22:53.696 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-7529"]
+2024-04-11 21:22:53.697 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-11 21:22:53.697 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.69]
+2024-04-11 21:22:53.767 [restartedMain] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2024-04-11 21:22:53.767 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1788 ms
+2024-04-11 21:22:56.138 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-11 21:22:56.234 [restartedMain] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2024-04-11 21:22:57.965 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-7529"]
+2024-04-11 21:22:57.974 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 7529 (http) with context path '/api'
+2024-04-11 21:22:57.976 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2024-04-11 21:22:57.978 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2024-04-11 21:22:58.004 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2024-04-11 21:22:58.517 [restartedMain] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2024-04-11 21:22:58.528 [restartedMain] INFO  com.nanshuo.project.MyApplication - Started MyApplication in 7.223 seconds (JVM running for 8.607)
+2024-04-11 21:22:58.531 [restartedMain] INFO  com.nanshuo.project.MyApplication - Project started successfully！
+2024-04-11 21:23:00.331 [http-nio-0.0.0.0-7529-exec-1] INFO  o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-11 21:23:00.331 [http-nio-0.0.0.0-7529-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-11 21:23:00.334 [http-nio-0.0.0.0-7529-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-04-11 21:23:41.644 [http-nio-0.0.0.0-7529-exec-3] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: 7a0937b6-01fd-43ec-aa48-65043141edd4, path: /api/interfaceInfo/get, ip: 0:0:0:0:0:0:0:1, params: [IdRequest(id=1)]
+2024-04-11 21:23:41.671 [http-nio-0.0.0.0-7529-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-11 21:23:41.957 [http-nio-0.0.0.0-7529-exec-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-11 21:23:42.020 [http-nio-0.0.0.0-7529-exec-3] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: 7a0937b6-01fd-43ec-aa48-65043141edd4, cost: 376ms
+2024-04-11 21:47:37.438 [http-nio-0.0.0.0-7529-exec-5] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: 18af9571-3f6a-4f28-9ca3-4081d0f6e16d, path: /api/interfaceInfo/list, ip: 0:0:0:0:0:0:0:1, params: [InterfaceInfoQueryRequest(id=null, name=null, description=null, url=null, requestHeader=null, responseHeader=null, status=null, method=null, userId=null)]
+2024-04-11 21:47:37.487 [http-nio-0.0.0.0-7529-exec-5] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: 18af9571-3f6a-4f28-9ca3-4081d0f6e16d, cost: 48ms
+2024-04-11 21:47:50.431 [http-nio-0.0.0.0-7529-exec-6] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: e0ad0396-689a-4725-ad00-6aabd72a9235, path: /api/interfaceInfo/delete, ip: 0:0:0:0:0:0:0:1, params: [IdRequest(id=0), org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@404555ff]
+2024-04-11 21:47:57.695 [http-nio-0.0.0.0-7529-exec-7] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: d4026da2-eed2-45f5-91a9-5b01f0d4408f, path: /api/interfaceInfo/list/page, ip: 0:0:0:0:0:0:0:1, params: [InterfaceInfoQueryRequest(id=null, name=null, description=null, url=null, requestHeader=null, responseHeader=null, status=null, method=null, userId=null), org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@672b2837]
+2024-04-11 21:47:57.748 [http-nio-0.0.0.0-7529-exec-7] INFO  com.nanshuo.project.aop.LogInterceptorAop - request end, id: d4026da2-eed2-45f5-91a9-5b01f0d4408f, cost: 55ms
+2024-04-11 21:48:09.161 [http-nio-0.0.0.0-7529-exec-10] INFO  com.nanshuo.project.aop.LogInterceptorAop - request start，id: 871194b0-85fa-49bb-9383-b764f2bf9ed0, path: /api/interfaceInfo/update, ip: 0:0:0:0:0:0:0:1, params: [InterfaceInfoUpdateRequest(id=0, name=, description=, url=, requestParams=, requestHeader=, responseHeader=, status=0, method=), org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper@14492062]
+2024-04-11 21:50:15.168 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-11 21:50:15.190 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
