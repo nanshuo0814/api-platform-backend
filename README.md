@@ -20,4 +20,4 @@
 - Dubbo 分布式（RPC、Nacos）
 - Swagger + Knife4j 接口文档生成
 - Spring Cloud Gateway 微服务网关
-- Hutool、Apache Common Utils、Gson 等工具库
+- Hutool、Apache Common Utils、Jackson 等工具库
