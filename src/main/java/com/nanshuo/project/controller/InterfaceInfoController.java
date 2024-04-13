@@ -2,6 +2,7 @@ package com.nanshuo.project.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.nanshuo.apiclientsdk.client.ApiClient;
 import com.nanshuo.project.annotation.Check;
 import com.nanshuo.project.common.ApiResponse;
 import com.nanshuo.project.common.ApiResult;
@@ -13,10 +14,13 @@ import com.nanshuo.project.model.domain.InterfaceInfo;
 import com.nanshuo.project.model.domain.User;
 import com.nanshuo.project.model.dto.IdRequest;
 import com.nanshuo.project.model.dto.interfaceinfo.InterfaceInfoAddRequest;
+import com.nanshuo.project.model.dto.interfaceinfo.InterfaceInfoInvokeRequest;
 import com.nanshuo.project.model.dto.interfaceinfo.InterfaceInfoQueryRequest;
 import com.nanshuo.project.model.dto.interfaceinfo.InterfaceInfoUpdateRequest;
+import com.nanshuo.project.model.enums.InterfaceInfoStatusEnum;
 import com.nanshuo.project.service.InterfaceInfoService;
 import com.nanshuo.project.service.UserService;
+import com.nanshuo.project.utils.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -199,5 +203,101 @@ public class InterfaceInfoController {
     }
 
     // endregion
+
+
+    /**
+     * 发布
+     *
+     * @param idRequest id请求
+     * @param request   请求
+     * @return {@code BaseResponse<Boolean>}
+     */
+    @PostMapping("/online")
+    @Check(checkAuth = UserConstant.ADMIN_ROLE)
+    public ApiResponse<Boolean> onlineInterfaceInfo(@RequestBody IdRequest idRequest,
+                                                     HttpServletRequest request) {
+        if (idRequest == null || idRequest.getId() <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        long id = idRequest.getId();
+        // 判断是否存在
+        InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(id);
+        if (oldInterfaceInfo == null) {
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        // 判断该接口是否可以调用
+        com.nanshuo.apiclientsdk.model.User user = new com.nanshuo.apiclientsdk.model.User();
+        user.setUsername("test");
+        String username = ApiClient.getUsernameByPost(user);
+        if (StringUtils.isBlank(username)) {
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "接口验证失败");
+        }
+        // 仅本人或管理员可修改
+        InterfaceInfo interfaceInfo = new InterfaceInfo();
+        interfaceInfo.setId(id);
+        interfaceInfo.setStatus(InterfaceInfoStatusEnum.ONLINE.getValue());
+        boolean result = interfaceInfoService.updateById(interfaceInfo);
+        return ApiResult.success(result);
+    }
+
+    /**
+     * 下线
+     *
+     * @param idRequest
+     * @param request
+     * @return
+     */
+    @PostMapping("/offline")
+    @Check(checkAuth = UserConstant.ADMIN_ROLE)
+    public ApiResponse<Boolean> offlineInterfaceInfo(@RequestBody IdRequest idRequest,
+                                                      HttpServletRequest request) {
+        if (idRequest == null || idRequest.getId() <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        long id = idRequest.getId();
+        // 判断是否存在
+        InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(id);
+        if (oldInterfaceInfo == null) {
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        // 仅本人或管理员可修改
+        InterfaceInfo interfaceInfo = new InterfaceInfo();
+        interfaceInfo.setId(id);
+        interfaceInfo.setStatus(InterfaceInfoStatusEnum.OFFLINE.getValue());
+        boolean result = interfaceInfoService.updateById(interfaceInfo);
+        return ApiResult.success(result);
+    }
+
+    /**
+     * 测试调用
+     *
+     * @param interfaceInfoInvokeRequest
+     * @param request
+     * @return
+     */
+    @PostMapping("/invoke")
+    public ApiResponse<Object> invokeInterfaceInfo(@RequestBody InterfaceInfoInvokeRequest interfaceInfoInvokeRequest,
+                                                    HttpServletRequest request) {
+        if (interfaceInfoInvokeRequest == null || interfaceInfoInvokeRequest.getId() <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        long id = interfaceInfoInvokeRequest.getId();
+        String userRequestParams = interfaceInfoInvokeRequest.getUserRequestParams();
+        // 判断是否存在
+        InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(id);
+        if (oldInterfaceInfo == null) {
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        if (oldInterfaceInfo.getStatus() == InterfaceInfoStatusEnum.OFFLINE.getValue()) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "接口已关闭");
+        }
+        User loginUser = userService.getLoginUser(request);
+        String accessKey = loginUser.getAccessKey();
+        String secretKey = loginUser.getSecretKey();
+        ApiClient tempClient = new ApiClient(accessKey, secretKey);
+        com.nanshuo.apiclientsdk.model.User user = JsonUtils.jsonToObj(userRequestParams, com.nanshuo.apiclientsdk.model.User.class);
+        String usernameByPost = tempClient.getUsernameByPost(user);
+        return ApiResult.success(usernameByPost);
+    }
 
 }
