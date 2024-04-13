@@ -94,3 +94,8 @@ email:
   mailTitle: 邮箱验证码 # 邮件标题
   content: 快速开发模板 # 邮件正文里的项目名称
   expireTime: 5 # 验证码过期时间，单位分钟
+
+api:
+  client:
+    access-key: nanshuo
+    secret-key: nanshuo

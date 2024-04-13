@@ -23,9 +23,9 @@ public class ApiClient {
 
     private static final String GATEWAY_HOST = "http://localhost:8090";
 
-    private String accessKey;
+    private static String accessKey;
 
-    private String secretKey;
+    private static String secretKey;
 
     public ApiClient(String accessKey, String secretKey) {
         this.accessKey = accessKey;
@@ -50,7 +50,7 @@ public class ApiClient {
         return result;
     }
 
-    private Map<String, String> getHeaderMap(String body) {
+    private static Map<String, String> getHeaderMap(String body) {
         Map<String, String> hashMap = new HashMap<>();
         hashMap.put("accessKey", accessKey);
         // 一定不能直接发送
@@ -62,7 +62,7 @@ public class ApiClient {
         return hashMap;
     }
 
-    public String getUsernameByPost(User user) {
+    public static String getUsernameByPost(User user) {
         String json = JSONUtil.toJsonStr(user);
         HttpResponse httpResponse = HttpRequest.post(GATEWAY_HOST + "/api/name/user")
                 .addHeaders(getHeaderMap(json))
