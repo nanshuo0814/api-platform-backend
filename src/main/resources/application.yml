@@ -57,8 +57,8 @@ mybatis-plus:
 logging:
   file:
     # 日志文件路径,可以使用绝对路径和相对路径
-    path: ${user.dir}/logs  # 当前项目根路径${user.dir}
-    #path: E:/project_logs/api-platform-backend # 绝对路径
+#    path: ${user.dir}/logs  # 当前项目根路径${user.dir}
+    path: E:/project_logs/api-platform-backend # 绝对路径
 
 # 接口文档配置
 knife4j:
