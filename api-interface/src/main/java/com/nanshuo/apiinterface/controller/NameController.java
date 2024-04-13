@@ -1,5 +1,6 @@
 package com.nanshuo.apiinterface.controller;
 
+import com.nanshuo.apiclientsdk.utils.SignUtils;
 import com.nanshuo.apiinterface.model.User;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class NameController {
 
     @GetMapping("/get")
     public String getNameByGet(String name, HttpServletRequest request) {
-        System.out.println(request.getHeader("yupi"));
+        System.out.println(request.getHeader("nanshuo"));
         return "GET 你的名字是" + name;
     }
 
@@ -28,13 +29,13 @@ public class NameController {
 
     @PostMapping("/user")
     public String getUsernameByPost(@RequestBody User user, HttpServletRequest request) {
-//        String accessKey = request.getHeader("accessKey");
-//        String nonce = request.getHeader("nonce");
-//        String timestamp = request.getHeader("timestamp");
-//        String sign = request.getHeader("sign");
-//        String body = request.getHeader("body");
+        //String accessKey = request.getHeader("accessKey");
+        //String nonce = request.getHeader("nonce");
+        //String timestamp = request.getHeader("timestamp");
+        //String sign = request.getHeader("sign");
+        //String body = request.getHeader("body");
 //        // todo 实际情况应该是去数据库中查是否已分配给用户
-//        if (!accessKey.equals("yupi")) {
+//        if (!accessKey.equals("nanshuo")) {
 //            throw new RuntimeException("无权限");
 //        }
 //        if (Long.parseLong(nonce) > 10000) {
@@ -45,12 +46,11 @@ public class NameController {
 //
 //        }
         // todo 实际情况中是从数据库中查出 secretKey
-//        String serverSign = SignUtils.genSign(body, "abcdefgh");
-//        if (!sign.equals(serverSign)) {
-//            throw new RuntimeException("无权限");
-//        }
+        //String serverSign = SignUtils.genSign(body, "nanshuo");
+        //if (!sign.equals(serverSign)) {
+        //    throw new RuntimeException("无权限");
+        //}
         // todo 调用次数 + 1 invokeCount
-        String result = "POST 用户名字是" + user.getUsername();
-        return result;
+        return "POST 用户名字是" + user.getUsername();
     }
 }
