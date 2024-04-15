@@ -39,7 +39,7 @@ public class NameController {
 //            throw new RuntimeException("无权限");
 //        }
 //        if (Long.parseLong(nonce) > 10000) {
-//            throw new RuntimeException("无权限");
+//            trow new RuntimeException("无权限");
 //        }
         // todo 时间和当前时间不能超过 5 分钟
 //        if (timestamp) {
