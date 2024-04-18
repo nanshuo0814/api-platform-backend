@@ -4,6 +4,8 @@ package com.nanshuo.project.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.nanshuo.apicommon.model.entity.UserInterfaceInfo;
 
+import java.util.List;
+
 /**
 * @author dell
 * @description 针对表【user_interface_info(用户调用接口关系)】的数据库操作Mapper
@@ -11,6 +13,8 @@ import com.nanshuo.apicommon.model.entity.UserInterfaceInfo;
 * @Entity com.nanshuo.project.model.domain.UserInterfaceInfo
 */
 public interface UserInterfaceInfoMapper extends BaseMapper<UserInterfaceInfo> {
+
+    List<UserInterfaceInfo> listTopInvokeInterfaceInfo(int limit);
 
 }
 
