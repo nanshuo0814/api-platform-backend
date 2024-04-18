@@ -1,8 +1,8 @@
 package com.nanshuo.project.model.enums.sort;
 
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
-import com.nanshuo.project.model.domain.User;
 import lombok.Getter;
+import com.nanshuo.apicommon.model.entity.User;
 
 import java.util.Arrays;
 import java.util.Map;

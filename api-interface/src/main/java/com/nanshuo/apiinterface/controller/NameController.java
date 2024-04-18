@@ -1,6 +1,5 @@
 package com.nanshuo.apiinterface.controller;
 
-import com.nanshuo.apiclientsdk.utils.SignUtils;
 import com.nanshuo.apiinterface.model.User;
 import org.springframework.web.bind.annotation.*;
 

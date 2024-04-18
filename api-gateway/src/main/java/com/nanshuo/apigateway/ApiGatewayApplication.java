@@ -1,6 +1,6 @@
 package com.nanshuo.apigateway;
 
-import com.nanshuo.provider.DemoService;
+import com.nanshuo.project.provider.DemoService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
@@ -41,14 +41,14 @@ public class ApiGatewayApplication {
     public String doSayHello2(String name) {
         return demoService.sayHello2(name);
     }
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("tobaidu", r -> r.path("/baidu")
-                        .uri("https://www.baidu.com"))
-                .route("toydgicu", r -> r.path("/ydgicu")
-                        .uri("http://blog.ydg.icu"))
-                .build();
-    }
+    //@Bean
+    //public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+    //    return builder.routes()
+    //            .route("tobaidu", r -> r.path("/baidu")
+    //                    .uri("https://www.baidu.com"))
+    //            .route("toydgicu", r -> r.path("/ydgicu")
+    //                    .uri("http://blog.ydg.icu"))
+    //            .build();
+    //}
 
 }

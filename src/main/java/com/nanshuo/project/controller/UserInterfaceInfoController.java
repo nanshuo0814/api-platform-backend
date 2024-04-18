@@ -2,6 +2,8 @@ package com.nanshuo.project.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.nanshuo.apicommon.model.entity.User;
+import com.nanshuo.apicommon.model.entity.UserInterfaceInfo;
 import com.nanshuo.project.annotation.Check;
 import com.nanshuo.project.common.ApiResponse;
 import com.nanshuo.project.common.ApiResult;
@@ -9,8 +11,6 @@ import com.nanshuo.project.common.ErrorCode;
 import com.nanshuo.project.constant.PageConstant;
 import com.nanshuo.project.constant.UserConstant;
 import com.nanshuo.project.exception.BusinessException;
-import com.nanshuo.project.model.domain.User;
-import com.nanshuo.project.model.domain.UserInterfaceInfo;
 import com.nanshuo.project.model.dto.IdRequest;
 import com.nanshuo.project.model.dto.UserInterfaceInfo.UserInterfaceInfoAddRequest;
 import com.nanshuo.project.model.dto.UserInterfaceInfo.UserInterfaceInfoQueryRequest;

@@ -1,7 +1,8 @@
 package com.nanshuo.project.service;
 
+
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.nanshuo.project.model.domain.UserInterfaceInfo;
+import com.nanshuo.apicommon.model.entity.UserInterfaceInfo;
 
 /**
 * @author dell
@@ -17,5 +18,15 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
      * @param add               添加
      */
     void validUserInterfaceInfo(UserInterfaceInfo userInterfaceInfo, boolean add);
+
+    /**
+     * 调用计数
+     *
+     * @param interfaceInfoId 接口信息id
+     * @param userId          用户id
+     * @return boolean
+     */
+    boolean invokeCount(long interfaceInfoId, long userId);
+
 
 }

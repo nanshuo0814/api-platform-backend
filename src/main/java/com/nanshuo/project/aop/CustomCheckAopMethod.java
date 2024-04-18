@@ -1,11 +1,11 @@
 package com.nanshuo.project.aop;
 
+import com.nanshuo.apicommon.model.entity.User;
 import com.nanshuo.project.annotation.Check;
 import com.nanshuo.project.annotation.CheckParam;
 import com.nanshuo.project.common.ErrorCode;
 import com.nanshuo.project.constant.NumberConstant;
 import com.nanshuo.project.exception.BusinessException;
-import com.nanshuo.project.model.domain.User;
 import com.nanshuo.project.model.enums.user.UserRegexEnums;
 import com.nanshuo.project.model.enums.user.UserRoleEnums;
 import com.nanshuo.project.service.UserService;
@@ -37,7 +37,7 @@ import java.util.Arrays;
  * @date 2023/12/30 20:36:34
  */
 @Slf4j
-@Component("CustomCheckAopMethod")
+@Component
 @RequiredArgsConstructor
 public class CustomCheckAopMethod {
 

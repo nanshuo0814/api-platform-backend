@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 接口信息
  */
-@TableName(value ="interface_info")
+//@TableName(value ="interface_info")
 @Data
 public class InterfaceInfo implements Serializable {
     /**

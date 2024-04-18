@@ -3,7 +3,7 @@ package com.nanshuo.project.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.nanshuo.project.model.domain.User;
+import com.nanshuo.apicommon.model.entity.User;
 import com.nanshuo.project.model.dto.user.*;
 import com.nanshuo.project.model.vo.user.UserLoginVO;
 import com.nanshuo.project.model.vo.user.UserSafetyVO;

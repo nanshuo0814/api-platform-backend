@@ -89,7 +89,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         if (invokeUser == null) {
             return handleNoAuth(response);
         }
-//        if (!"yupi".equals(accessKey)) {
+//        if (!"nanshuo".equals(accessKey)) {
 //            return handleNoAuth(response);
 //        }
         if (nonce != null && Long.parseLong(nonce) > 10000L) {

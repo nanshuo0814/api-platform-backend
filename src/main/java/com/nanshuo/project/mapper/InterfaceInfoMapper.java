@@ -1,7 +1,8 @@
 package com.nanshuo.project.mapper;
 
-import com.nanshuo.project.model.domain.InterfaceInfo;
+
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.nanshuo.apicommon.model.entity.InterfaceInfo;
 
 /**
 * @author dell

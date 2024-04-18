@@ -2,7 +2,7 @@ package com.nanshuo.project.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.nanshuo.project.model.domain.InterfaceInfo;
+import com.nanshuo.apicommon.model.entity.InterfaceInfo;
 
 /**
 * @author dell

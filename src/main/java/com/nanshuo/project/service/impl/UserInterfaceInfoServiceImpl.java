@@ -1,10 +1,11 @@
 package com.nanshuo.project.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.nanshuo.apicommon.model.entity.UserInterfaceInfo;
 import com.nanshuo.project.common.ErrorCode;
 import com.nanshuo.project.exception.BusinessException;
 import com.nanshuo.project.mapper.UserInterfaceInfoMapper;
-import com.nanshuo.project.model.domain.UserInterfaceInfo;
 import com.nanshuo.project.service.UserInterfaceInfoService;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +38,29 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         if (userInterfaceInfo.getLeftNum() < 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "剩余次数不能小于 0");
         }
+    }
+
+    /**
+     * 调用计数
+     *
+     * @param interfaceInfoId 接口信息id
+     * @param userId          用户id
+     * @return boolean
+     */
+    @Override
+    public boolean invokeCount(long interfaceInfoId, long userId) {
+        // 判断
+        if (interfaceInfoId <= 0 || userId <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+
+        UpdateWrapper<UserInterfaceInfo> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("interfaceInfoId", interfaceInfoId);
+        updateWrapper.eq("userId", userId);
+
+        //updateWrapper.gt("leftNum", 0);
+        updateWrapper.setSql("leftNum = leftNum - 1, totalNum = totalNum + 1");
+        return this.update(updateWrapper);
     }
 
 }

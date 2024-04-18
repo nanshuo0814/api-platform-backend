@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.nanshuo.provider;
+package com.nanshuo.project.provider;
 
 import java.util.concurrent.CompletableFuture;
 

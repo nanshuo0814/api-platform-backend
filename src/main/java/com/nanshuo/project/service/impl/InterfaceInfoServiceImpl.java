@@ -1,9 +1,9 @@
 package com.nanshuo.project.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.nanshuo.apicommon.model.entity.InterfaceInfo;
 import com.nanshuo.project.common.ErrorCode;
 import com.nanshuo.project.exception.BusinessException;
-import com.nanshuo.project.model.domain.InterfaceInfo;
 import com.nanshuo.project.service.InterfaceInfoService;
 import com.nanshuo.project.mapper.InterfaceInfoMapper;
 import org.apache.commons.lang3.StringUtils;

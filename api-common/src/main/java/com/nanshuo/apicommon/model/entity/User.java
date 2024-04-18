@@ -29,6 +29,11 @@ public class User implements Serializable {
     private String userAccount;
 
     /**
+     * 电子邮件
+     */
+    private String userEmail;
+
+    /**
      * 用户头像
      */
     private String userAvatar;
@@ -36,7 +41,12 @@ public class User implements Serializable {
     /**
      * 性别
      */
-    private Integer gender;
+    private Integer userGender;
+
+    /**
+     * 用户配置文件
+     */
+    private String userProfile;
 
     /**
      * 用户角色: user, admin
